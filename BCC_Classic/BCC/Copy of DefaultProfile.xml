@@ -1,0 +1,326 @@
+<Profile Name="DefaultProfile" UserTheme="Day">
+	<Module ID="101" Title="BizTalk Monitoring - Health Matrix" SubTitle="Information">
+		<Basic>
+			<Key ID="HelpText" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ServiceList">
+				<Value>BTSSvc$BizTalkServerApplication</Value>
+				<Value>MSSQLSERVER</Value>
+        <Value>SQLSERVERAGENT</Value>
+			</Key>
+			<Key ID="SPApplicationList">
+				<Value>Microsoft.Practices.ESB</Value>
+			</Key>
+			<Key ID="RLApplicationList">
+				<Value>IHS.Integration</Value>
+				<Value>Microsoft.Practices.ESB</Value>
+			</Key>
+			<Key ID="HostInstanceList">
+				<Value>IHS_Send</Value>
+				<Value>IHS_Receive</Value>
+			</Key>
+			<Key ID="DatabaseServerWatchList">
+				<Value>Integrated Security=SSPI;database=BCCDB;server=BTS-DEV-NKARAM</Value>
+				<Value>Integrated Security=SSPI;database=BizTalkMgmtDb;server=BTS-DEV-NKARAM</Value>
+			</Key>
+			<Key ID="Announcement">
+				<Value>Welcome to ControlCenter, you are now running the latest version.</Value>
+			</Key>
+		</Extended>
+	</Module>
+  <Module ID="102" Title="BizTalk Monitoring - Message Statistics">
+    <Basic>
+      <Key ID="LoadMeterMaxLimit" Value="1000" />
+    </Basic>
+  </Module>
+  <Module ID="201" Title="BizTalk Artifacts - Windows Services" SubTitle="Configuration Information">
+		<Basic>
+			<Key ID="HelpText" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ServiceList">
+				<Value>BTSSvc$BizTalkServerApplication</Value>
+				<Value>BTSSvc$IHS_Send</Value>
+				<Value>BTSSvc$IHS_Receive</Value>
+        <Value>SQLSERVERAGENT</Value>
+      </Key>
+		</Extended>
+	</Module>
+	<Module ID="202" Title="BizTalk Artifacts - Host Instances" SubTitle="Information">
+		<Basic>
+			<Key ID="HelpText" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="HostInstanceList">
+				<Value>BizTalkServerApplication</Value>
+				<Value>IHS_Send</Value>
+				<Value>IHS_Receive</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="203" Title="BizTalk Artifacts - Orchestrations" SubTitle="Additional Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>IHS.Integration</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="204" Title="BizTalk Artifacts - Message View" SubTitle="Messaging Activity">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>IHS.Integration</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="205" Title="BizTalk Artifacts - Send Ports" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>IHS.Integration</Value>
+        <Value>Microsoft.Practices.ESB</Value>
+      </Key>
+		</Extended>
+	</Module>
+	<Module ID="206" Title="BizTalk Artifacts - Receive Ports and Locations" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>IHS.Integration</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="207" Title="BizTalk Artifacts - Pipelines" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>IHS.Integration</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="208" Title="BizTalk Artifacts - Maps" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>IHS.Integration</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="209" Title="BizTalk Artifacts - Schemas" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>OnePassport.OneData</Value>
+				<Value>Microsoft.Practices.ESB</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="210" Title="BizTalk Artifacts - Configuration" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ConfigDirectoryList">
+				<Value>C:\Program Files\Microsoft BizTalk Server 2009</Value>
+				<Value>C:\</Value>
+			</Key>
+			<Key ID="FileExtnList">
+				<Value>*.*.config</Value>
+				<Value>BCC*.zip</Value>				
+			</Key>			
+		</Extended>
+	</Module>
+	<Module ID="211" Title="BizTalk Artifacts - SSO Configuration" SubTitle="Information">
+		<Basic>
+			<Key ID="SSOConnectionString" Value="Integrated Security=SSPI;database=SSODB;server=." />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>MyFirstApplication</Value>
+				<Value></Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="301" Title="Partner Validation - Partner Services" SubTitle="Information">
+		<Basic>
+			<Key ID="WebRequestTimeout" Value="60000" />
+		</Basic>
+		<Extended>
+			<Key ID="ServiceName">
+				<Value>Monitoring</Value>
+				<Value>HealthCheck</Value>
+			</Key>
+			<Key ID="Monitoring">
+				<Value>http://localhost/OneData1</Value>
+        <Value><![CDATA[ <request>Monitoring</request> ]]></Value>
+			</Key>
+      <Key ID="HealthCheck">
+        <Value>http://localhost/OneData2</Value>
+        <Value>
+          <![CDATA[ <request>HealthCheck</request> ]]>
+        </Value>
+      </Key>      
+		</Extended>
+	</Module>
+	<Module ID="302" Title="Partner Validation - SQL Server Jobs" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="JobConnectionStringList">
+				<Value>Integrated Security=SSPI;database=msdb;server=BTS-DEV-NKARAM</Value>
+			</Key>
+			<Key ID="JobList">
+				<Value>syspolicy_purge_history</Value>
+			</Key>			
+		</Extended>
+	</Module>	
+	<Module ID="401" Title="Search - Event Logs" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="EventType">
+				<Value>Security</Value>
+				<Value>Application</Value>
+				<Value></Value>
+				<Value>System</Value>
+			</Key>
+			<Key ID="EntryType">
+				<Value>System</Value>
+				<Value>Error</Value>
+				<Value>Information</Value>
+				<Value>Warning</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="402" Title="Search - BizTalk Artifact(s)" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="SearchHistory">
+				<Value>assembly</Value>
+				<Value>map</Value>
+				<Value>host</Value>
+				<Value>v1.0</Value>
+			</Key>
+		</Extended>
+	</Module>
+  <Module ID="501" Title="Deployment - Bindings" SubTitle="Information">
+    <Basic>
+      <Key ID="" Value="" />
+    </Basic>
+    <Extended>
+      <Key ID="ApplicationList">
+        <Value>IHS.Integration</Value>
+        <Value>OnePassport.OneData</Value>
+      </Key>
+    </Extended>
+  </Module>  
+	<Module ID="502" Title="Deployment - Configuration" SubTitle="Verification Steps">
+		<Basic>
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ConfigOperations">
+				<Value>HostConfiguration</Value>
+				<Value>SSOConfiguration</Value>
+			</Key>
+			<Key ID="HostConfiguration">
+				<Value>
+					<![CDATA[
+<BizTalkHostConfig Version="1.0" defaultHost="BizTalkServerApplication" defaultIsoHost="BizTalkServerIsolatedHost">
+<MakeHosts>
+<Host>
+	<HostName>SampleHost</HostName>
+	<Type>InProcess</Type>
+	<NTGroup>BizTalk Application Users</NTGroup>
+	<AuthTrusted>false</AuthTrusted>
+	<InstallServers Action="false">
+		<Server>
+		  <ServerName Start="true">BTS-DEV-NKARAM</ServerName>
+		  <UserName></UserName>
+		  <Password></Password>
+		</Server>
+	</InstallServers>
+	<SetAdapters Action="false">
+		<Adapter>
+		  <AdapterName Type="Receive">FILE</AdapterName>
+		</Adapter>
+	</SetAdapters>
+</Host>
+</MakeHosts>
+</BizTalkHostConfig>
+					]]>
+				</Value>
+			</Key>
+			<Key ID="SSOConfiguration">
+				<Value>
+					<![CDATA[
+<sso>
+<application name="MySampleApplication">
+	<description>SSO Config for a sample application</description>
+	<appUserAccount>BizTalk Application Users</appUserAccount>
+	<appAdminAccount>BizTalk Server Administrators</appAdminAccount>
+	<field ordinal="0" label="CAR_MAKE" masked="no">BMW X3</field>
+	<field ordinal="1" label="CAR_MODEL" masked="no">2011</field>
+  <field ordinal="2" label="CAR_TRIM" masked="no">Sport</field>
+	<flags configStoreApp="yes" allowLocalAccounts="yes" enableApp="yes" />
+</application>
+</sso>
+					]]>
+				</Value>
+			</Key>			
+		</Extended>
+	</Module>
+	<Module ID="504" Title="Deployment - Verification" SubTitle="Verification Steps">
+		<Basic>
+			<Key ID="SearchTerm" Value="IHS" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>IHS.Integration</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="505" Title="Deployment - Scalability Index" SubTitle="Additional Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>IHS.Integration</Value>
+			</Key>
+		</Extended>
+	</Module>	
+</Profile>

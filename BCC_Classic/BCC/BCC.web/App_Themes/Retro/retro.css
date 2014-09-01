@@ -1,0 +1,40 @@
+.pageHeader
+{
+  background-color: #7C1818;
+}
+
+.spantag
+{
+  color:#7C1818;
+  font-size:10pt;
+}
+
+.span_regular
+{
+  color:#7C1818;
+  font-size:10pt;
+}
+    
+.rowStyle 
+{   
+    color: #333333; 
+    background-color: #FEE680;
+}
+
+.altRowStyle 
+{
+    color: #333333; 
+    background-color: #FEF9BF;
+}
+
+.rowStyleHL 
+{
+    color: #333333; 
+    background-color: #CCCCEE;
+}
+
+.altRowStyleHL 
+{
+    color: #333333; 
+    background-color: #CCCCEE;
+}    

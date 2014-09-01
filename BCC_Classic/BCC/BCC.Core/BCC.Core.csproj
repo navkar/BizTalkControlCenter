@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84543883-37D1-4137-9A5A-53F7A00780B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BCC.Core</RootNamespace>
+    <AssemblyName>BCC.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>tempKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.BizTalk.ExplorerOM">
+      <HintPath>..\..\lib\Microsoft.BizTalk.ExplorerOM.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Interop.SSOClient, Version=5.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\Common Files\Enterprise Single Sign-On\Microsoft.BizTalk.Interop.SSOClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Messaging">
+      <HintPath>..\..\lib\Microsoft.BizTalk.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Operations">
+      <HintPath>..\..\lib\Microsoft.BizTalk.Operations.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline">
+      <HintPath>..\..\lib\Microsoft.BizTalk.Pipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EnterpriseSingleSignOn.Interop, Version=5.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\Common Files\Enterprise Single Sign-On\Microsoft.EnterpriseSingleSignOn.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BCCHexUtil.cs" />
+    <Compile Include="BCCPerfCounterMonitor.cs" />
+    <Compile Include="BCCDataAccess.cs" />
+    <Compile Include="BCCJobsHelper.cs" />
+    <Compile Include="BCCLog.cs" />
+    <Compile Include="BCCMailer.cs" />
+    <Compile Include="BCCManageConfigData.cs" />
+    <Compile Include="BCCMonitoringDataAccess.cs" />
+    <Compile Include="BCCOperator.cs" />
+    <Compile Include="BCCFilter.cs" />
+    <Compile Include="BCCFilterList.cs" />
+    <Compile Include="BCCPerformanceCounters.cs" />
+    <Compile Include="BCCProfile.cs" />
+    <Compile Include="BCCReportScheduler.cs" />
+    <Compile Include="BCCReportScheduleStruct.cs" />
+    <Compile Include="BCCServiceHelper.cs" />
+    <Compile Include="BCCServiceReportStruct.cs" />
+    <Compile Include="BCCTask.cs" />
+    <Compile Include="BCCTaskDataAccess.cs" />
+    <Compile Include="BCCTransformationHelper.cs" />
+    <Compile Include="BCCUIHelper.cs" />
+    <Compile Include="BCCWebAudit.cs" />
+    <Compile Include="BCCWebAuditEvent.cs" />
+    <Compile Include="BCCMonitoring.cs" />
+    <Compile Include="BCCWMIHelpers.cs" />
+    <Compile Include="BCCPerfCounterDataAccess.cs" />
+    <Compile Include="BCCAuditDataAccess.cs" />
+    <Compile Include="MSBTS_DeploymentService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MSBTS_HostInstance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MSBTS_HostInstanceSetting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MSBTS_MessageInstance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MSBTS_MsgBoxSetting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MSBTS_ReceiveLocation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MSBTS_SendPort.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MSBTS_Server.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MSBTS_ServiceInstance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NTLogEvent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SSOConfigHelper.cs" />
+    <Compile Include="SSOConfigManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tempKey.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

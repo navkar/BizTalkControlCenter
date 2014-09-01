@@ -1,0 +1,405 @@
+<!-- 
+********************************************************************
+Default Profile file. Designed by Naveen Karamchetti (biztalkcontrolcenter@gmail.com)
+
+NOTE: Go through the entire file and make the required modifications.
+All new users which are created after this modification will get the new updated profile information.
+
+Warning: DO NOT change the <Key> ID value.
+
+Make changes to <Value> tags as required by your BizTalk configuration.
+
+Post installation: Use module speedcode '603' to make modifications to user profile.
+
+********************************************************************
+-->
+
+<Profile Name="DefaultProfile" UserTheme="Day">
+	<Module ID="101" Title="BizTalk Monitoring - Health Matrix" SubTitle="Information">
+		<Basic>
+			<Key ID="HelpText" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ServiceList">
+				<Value>BTSSvc$BizTalkServerApplication</Value>
+				<Value>MSSQLSERVER</Value>
+        <Value>SQLSERVERAGENT</Value>
+			</Key>
+			<Key ID="SPApplicationList">
+				<Value>BizTalk Application 1</Value>
+			</Key>
+			<Key ID="RLApplicationList">
+				<Value>BizTalk Application 1</Value>
+			</Key>
+			<Key ID="HostInstanceList">
+				<Value>BizTalkServerApplication</Value>
+			</Key>
+			<Key ID="DatabaseServerWatchList">
+				<Value>Integrated Security=SSPI;database=BCCDB;server=.</Value>
+				<Value>Integrated Security=SSPI;database=BizTalkMgmtDb;server=.</Value>
+			</Key>
+			<Key ID="Announcement">
+				<Value>Welcome to BizTalk Control Center (BCC). Send your comments to biztalkcontrolcenter@gmail.com</Value>
+			</Key>
+      <Key ID="ReminderCheckList">
+        <Value>Remind yourself</Value>
+      </Key>
+      <Key ID="BizTalkMessagesDisplayMaxLimit">
+        <Value>500</Value>
+      </Key>
+    </Extended>
+	</Module>
+  <Module ID="102" Title="BizTalk Monitoring - Message Statistics">
+    <Extended>
+      <Key ID="LoadMeterMaxLimit">
+        <Value>1200</Value>
+      </Key>
+    </Extended>
+  </Module>
+  <Module ID="103" Title="BizTalk Monitoring - User Notifications">
+    <Basic>
+      <Key ID="HelpText" Value="" />
+    </Basic>
+    <Extended>
+      <Key ID="Announcement">
+        <Value>The BCC agent takes 60 seconds to register new or changes to the BizTalk artifacts for monitoring.</Value>
+      </Key>
+    </Extended>    
+  </Module>
+  <Module ID="104" Title="BizTalk Monitoring - Performance Counters">
+    <Basic>
+      <Key ID="HelpText" Value="" />
+    </Basic>
+    <Extended>
+      <Key ID="Announcement">
+        <Value>The BCC agent takes 60 seconds to register new or changes to the Performance counters for monitoring.</Value>
+      </Key>
+    </Extended>
+  </Module>  
+  <Module ID="201" Title="BizTalk Artifacts - Windows Services" SubTitle="Configuration Information">
+		<Basic>
+			<Key ID="HelpText" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ServiceList">
+				<Value>BTSSvc$BizTalkServerApplication</Value>
+        <Value>SQLSERVERAGENT</Value>
+      </Key>
+		</Extended>
+	</Module>
+	<Module ID="202" Title="BizTalk Artifacts - Host Instances" SubTitle="Information">
+		<Basic>
+			<Key ID="HelpText" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="HostInstanceList">
+				<Value>BizTalkServerApplication</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="203" Title="BizTalk Artifacts - Orchestrations" SubTitle="Additional Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>BizTalk Application 1</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="204" Title="BizTalk Artifacts - Message View" SubTitle="Messaging Activity">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>BizTalk Application 1</Value>
+			</Key>
+      <Key ID="BizTalkMessagesDisplayMaxLimit">
+        <Value>500</Value>
+      </Key>      
+		</Extended>
+	</Module>
+	<Module ID="205" Title="BizTalk Artifacts - Send Ports" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>BizTalk Application 1</Value>
+      </Key>
+		</Extended>
+	</Module>
+	<Module ID="206" Title="BizTalk Artifacts - Receive Ports and Locations" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>BizTalk Application 1</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="207" Title="BizTalk Artifacts - Pipelines" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>BizTalk Application 1</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="208" Title="BizTalk Artifacts - Maps" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>BizTalk Application 1</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="209" Title="BizTalk Artifacts - Schemas" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>BizTalk Application 1</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="210" Title="BizTalk Artifacts - Configuration" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ConfigDirectoryList">
+				<Value>C:\</Value>
+			</Key>
+			<Key ID="FileExtnList">
+				<Value>*.config</Value>
+				<Value>*.log</Value>
+        <Value>*.txt</Value>
+        <Value>*.xml</Value>
+      </Key>			
+		</Extended>
+	</Module>
+	<Module ID="211" Title="BizTalk Artifacts - SSO Configuration" SubTitle="Information">
+		<Basic>
+			<Key ID="SSOConnectionString" Value="Integrated Security=SSPI;database=SSODB;server=." />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value></Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="301" Title="Partner Validation - Partner Services" SubTitle="Information">
+		<Basic>
+			<Key ID="WebRequestTimeout" Value="60000" />
+		</Basic>
+		<Extended>
+			<Key ID="ServiceName">
+				<Value>Partner_Monitoring_1</Value>
+        <Value>Partner_Monitoring_2</Value>
+        <Value>Partner_Monitoring_3</Value>
+        <Value>Partner_HealthCheck_1</Value>
+        <Value>Partner_HealthCheck_2</Value>
+        <Value>Partner_HealthCheck_3</Value>
+      </Key>
+			<Key ID="Partner_Monitoring_1">
+				<Value>http://localhost</Value>
+        <Value><![CDATA[ <sample>Sample data</sample> ]]></Value>
+			</Key>
+      <Key ID="Partner_Monitoring_2">
+        <Value>http://localhost</Value>
+        <Value><![CDATA[ <sample>Sample data</sample> ]]></Value>
+      </Key>
+      <Key ID="Partner_Monitoring_3">
+        <Value>http://localhost</Value>
+        <Value><![CDATA[ <sample>Sample data</sample> ]]></Value>
+      </Key>
+      <Key ID="Partner_HealthCheck_1">
+        <Value>http://localhost</Value>
+        <Value><![CDATA[ <sample>Sample data</sample> ]]></Value>
+      </Key>
+      <Key ID="Partner_HealthCheck_2">
+        <Value>http://localhost</Value>
+        <Value><![CDATA[ <sample>Sample data</sample> ]]></Value>
+      </Key>
+      <Key ID="Partner_HealthCheck_3">
+        <Value>http://localhost</Value>
+        <Value><![CDATA[ <sample>Sample data</sample> ]]></Value>
+      </Key>
+    </Extended>
+	</Module>
+	<Module ID="302" Title="Partner Validation - SQL Server Jobs" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="JobConnectionStringList">
+				<Value>Integrated Security=SSPI;database=msdb;server=.</Value>
+			</Key>
+			<Key ID="JobList">
+				<Value>DTA Purge and Archive (BizTalkDTADb)</Value>
+        <Value>Backup BizTalk Server (BizTalkMgmtDb)</Value>
+			</Key>			
+		</Extended>
+	</Module>	
+	<Module ID="401" Title="Search - Event Logs" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="EventType">
+				<Value>Security</Value>
+				<Value>Application</Value>
+				<Value></Value>
+				<Value>System</Value>
+			</Key>
+			<Key ID="EntryType">
+				<Value>System</Value>
+				<Value>Error</Value>
+				<Value>Information</Value>
+				<Value>Warning</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="402" Title="Search - BizTalk Artifact(s)" SubTitle="Information">
+		<Basic>
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="SearchHistory">
+				<Value>assembly</Value>
+				<Value>map</Value>
+				<Value>host</Value>
+				<Value>v1.0</Value>
+			</Key>
+		</Extended>
+	</Module>
+  <Module ID="501" Title="Deployment - Bindings" SubTitle="Information">
+    <Basic>
+      <Key ID="" Value="" />
+    </Basic>
+    <Extended>
+      <Key ID="ApplicationList">
+        <Value>BizTalk Application 1</Value>
+      </Key>
+    </Extended>
+  </Module>  
+	<Module ID="502" Title="Deployment - Configuration" SubTitle="Verification Steps">
+		<Basic>
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ConfigOperations">
+				<Value>HostConfiguration</Value>
+				<Value>SSOConfiguration</Value>
+			</Key>
+			<Key ID="HostConfiguration">
+				<Value>
+					<![CDATA[
+<BizTalkHostConfig Version="1.0" defaultHost="BizTalkServerApplication" defaultIsoHost="BizTalkServerIsolatedHost">
+<MakeHosts>
+<Host>
+	<HostName>SampleHost</HostName>
+	<Type>InProcess</Type>
+	<NTGroup>BizTalk Application Users</NTGroup>
+	<AuthTrusted>false</AuthTrusted>
+	<InstallServers Action="false">
+		<Server>
+		  <ServerName Start="false">.</ServerName>
+		  <UserName></UserName>
+		  <Password></Password>
+		</Server>
+	</InstallServers>
+	<SetAdapters Action="false">
+		<Adapter>
+		  <AdapterName Type="Receive">FILE</AdapterName>
+		</Adapter>
+	</SetAdapters>
+</Host>
+</MakeHosts>
+</BizTalkHostConfig>
+					]]>
+				</Value>
+			</Key>
+			<Key ID="SSOConfiguration">
+				<Value>
+					<![CDATA[
+<sso>
+<application name="MySampleApplication">
+	<description>SSO Config for a sample application</description>
+	<appUserAccount>BizTalk Application Users</appUserAccount>
+	<appAdminAccount>BizTalk Server Administrators</appAdminAccount>
+	<field ordinal="0" label="CAR_MAKE" masked="no">BMW X3</field>
+	<field ordinal="1" label="CAR_MODEL" masked="no">2011</field>
+  <field ordinal="2" label="CAR_TRIM" masked="no">Sport</field>
+	<flags configStoreApp="yes" allowLocalAccounts="yes" enableApp="yes" />
+</application>
+</sso>
+					]]>
+				</Value>
+			</Key>			
+		</Extended>
+	</Module>
+	<Module ID="504" Title="Deployment - Verification" SubTitle="Verification Steps">
+		<Basic>
+			<Key ID="SearchTerm" Value="BizTalk" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>BizTalk Application 1</Value>
+			</Key>
+		</Extended>
+	</Module>
+	<Module ID="505" Title="Deployment - Scalability Index" SubTitle="Additional Information">
+		<Basic>
+			<Key ID="" Value="" />
+		</Basic>
+		<Extended>
+			<Key ID="ApplicationList">
+				<Value>BizTalk Application 1</Value>
+			</Key>
+		</Extended>
+	</Module>
+  <Module ID="603" Title="Administration - System Settings" SubTitle="Information">
+    <Basic>
+      <Key ID="" Value="" />
+    </Basic>
+  </Module>
+  <Module ID="701" Title="Developer Space - Orchestration View" SubTitle="Information">
+    <Basic>
+      <Key ID="" Value="" />
+    </Basic>
+    <Extended>
+      <Key ID="ApplicationList">
+        <Value>BizTalk Application 1</Value>
+      </Key>
+    </Extended>
+  </Module>
+  <Module ID="702" Title="Developer Space - Reminders" SubTitle="Information">
+    <Basic>
+      <Key ID="" Value="" />
+    </Basic>
+    <Extended>
+      <Key ID="ReminderCheckList">
+        <Value>Rate this application</Value>
+      </Key>
+    </Extended>
+  </Module>
+</Profile>

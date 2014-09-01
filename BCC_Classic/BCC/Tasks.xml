@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<DocumentElement>
+  <Task>
+    <taskID>fb6a7671-3e7b-48f1-8545-01684ab20e59</taskID>
+    <taskRef>4</taskRef>
+    <taskTitle>Prepare checklist for deployment</taskTitle>
+    <taskDescription />
+    <taskSpeedCode>101</taskSpeedCode>
+    <taskPriority>1</taskPriority>
+    <CreatedByUserName>JohnDoe</CreatedByUserName>
+    <UpdatedByUserName>JohnDoe</UpdatedByUserName>
+    <AssignToUserName>JohnDoe</AssignToUserName>
+    <AssignToUserEmail>naveen.karamchetti@ihs.com</AssignToUserEmail>
+    <createdOn>2011-08-01T17:45:40.083-06:00</createdOn>
+    <taskDueDate>2011-08-01T00:00:00-06:00</taskDueDate>
+    <taskStatus>Deferred</taskStatus>
+    <taskType>Once</taskType>
+    <taskDuration>4</taskDuration>
+    <showFlag>true</showFlag>
+    <ProjectName>My Other Size</ProjectName>
+  </Task>
+  <Task>
+    <taskID>6b59fc5d-2f78-4c00-8057-518bff7cfeef</taskID>
+    <taskRef>3</taskRef>
+    <taskTitle>Double check database queries</taskTitle>
+    <taskDescription />
+    <taskSpeedCode>101</taskSpeedCode>
+    <taskPriority>2</taskPriority>
+    <CreatedByUserName>JohnDoe</CreatedByUserName>
+    <UpdatedByUserName>JohnDoe</UpdatedByUserName>
+    <AssignToUserName>JohnDoe</AssignToUserName>
+    <AssignToUserEmail>naveen.karamchetti@ihs.com</AssignToUserEmail>
+    <createdOn>2011-08-01T17:44:39.707-06:00</createdOn>
+    <taskDueDate>2011-08-02T00:00:00-06:00</taskDueDate>
+    <taskStatus>InReview</taskStatus>
+    <taskType>Once</taskType>
+    <taskDuration>1</taskDuration>
+    <showFlag>true</showFlag>
+    <ProjectName>BizTalk Prod</ProjectName>
+  </Task>
+  <Task>
+    <taskID>db47b12f-3c76-49ec-9283-6f0730cbf7dd</taskID>
+    <taskRef>2</taskRef>
+    <taskTitle>Check the database sizes on all servers</taskTitle>
+    <taskDescription />
+    <taskSpeedCode>101</taskSpeedCode>
+    <taskPriority>2</taskPriority>
+    <CreatedByUserName>JohnDoe</CreatedByUserName>
+    <UpdatedByUserName>JohnDoe</UpdatedByUserName>
+    <AssignToUserName>JohnDoe</AssignToUserName>
+    <AssignToUserEmail>naveen.karamchetti@ihs.com</AssignToUserEmail>
+    <createdOn>2011-08-01T17:37:42.907-06:00</createdOn>
+    <taskDueDate>2011-08-03T00:00:00-06:00</taskDueDate>
+    <taskStatus>Remark</taskStatus>
+    <taskType>Once</taskType>
+    <taskDuration>3.5</taskDuration>
+    <showFlag>true</showFlag>
+    <ProjectName>BizTalk Prod</ProjectName>
+  </Task>
+  <Task>
+    <taskID>f7655567-e1a7-43a8-93e8-ba2cbf39d4b2</taskID>
+    <taskRef>5</taskRef>
+    <taskTitle>Send detailed status report</taskTitle>
+    <taskDescription />
+    <taskSpeedCode>101</taskSpeedCode>
+    <taskPriority>3</taskPriority>
+    <CreatedByUserName>JohnDoe</CreatedByUserName>
+    <UpdatedByUserName>JohnDoe</UpdatedByUserName>
+    <AssignToUserName>JohnDoe</AssignToUserName>
+    <AssignToUserEmail>naveen.karamchetti@ihs.com</AssignToUserEmail>
+    <createdOn>2011-08-01T17:47:36.35-06:00</createdOn>
+    <taskDueDate>2011-08-05T00:00:00-06:00</taskDueDate>
+    <taskStatus>InProgress</taskStatus>
+    <taskType>Weekly</taskType>
+    <taskDuration>2.5</taskDuration>
+    <showFlag>true</showFlag>
+    <ProjectName>BizTalk Prod</ProjectName>
+  </Task>
+</DocumentElement>

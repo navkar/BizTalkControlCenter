@@ -1,0 +1,11 @@
+﻿<sso>
+	<application name="SampleApplication">
+		<description>Config parameters for Sample Application</description>
+		<appUserAccount>BizTalk Application Users</appUserAccount>
+		<appAdminAccount>BizTalk Server Administrators</appAdminAccount>
+		<field ordinal="0" label="DEBUG_FLAG" masked="no">True</field>
+		<field ordinal="1" label="FLOW_CONTROL" masked="no">1</field>
+		<field ordinal="2" label="RELEASE_TYPE" masked="no">Debug</field>
+		<flags configStoreApp="yes" allowLocalAccounts="yes" enableApp="yes" />
+	</application>
+</sso>

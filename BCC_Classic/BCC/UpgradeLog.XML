@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="bcc">
+</Property><Property Name="Solution File" Value="C:\BCC_Classic\BCC\bcc.sln">
+</Property><Property Name="User Options File" Value="C:\BCC_Classic\BCC\bcc.suo">
+</Property><Property Name="Date" Value="Tuesday, June 21, 2011">
+</Property><Property Name="Time" Value="10:06 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="bcc.sln" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\bcc.sln">
+</Event><Event ErrorLevel="0" Project="" Source="bcc.suo" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\bcc.suo">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCC.Core.csproj" Description="Project file successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCC.Core.csproj">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCC.Core.csproj.user" Description="Project user file successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCC.Core.csproj.user">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCDataAccess.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCDataAccess.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCJobsHelper.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCJobsHelper.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCLog.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCLog.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCMailer.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCMailer.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCManageConfigData.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCManageConfigData.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCMonitoringDataAccess.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCMonitoringDataAccess.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCOperator.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCOperator.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCFilter.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCFilter.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCFilterList.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCFilterList.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCPerformanceCounters.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCPerformanceCounters.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCProfile.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCProfile.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCReportScheduler.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCReportScheduler.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCReportScheduleStruct.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCReportScheduleStruct.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCServiceHelper.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCServiceHelper.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCServiceReportStruct.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCServiceReportStruct.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCTask.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCTask.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCUIHelper.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCUIHelper.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCWebAuditEvent.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCWebAuditEvent.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCMonitoring.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCMonitoring.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCWMIHelpers.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCWMIHelpers.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCCPerfCounterDataAccess.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\BCCPerfCounterDataAccess.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\MSBTS_DeploymentService.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\MSBTS_DeploymentService.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\MSBTS_HostInstance.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\MSBTS_HostInstance.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\MSBTS_HostInstanceSetting.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\MSBTS_HostInstanceSetting.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\MSBTS_MessageInstance.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\MSBTS_MessageInstance.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\MSBTS_MsgBoxSetting.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\MSBTS_MsgBoxSetting.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\MSBTS_ReceiveLocation.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\MSBTS_ReceiveLocation.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\MSBTS_SendPort.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\MSBTS_SendPort.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\MSBTS_Server.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\MSBTS_Server.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\MSBTS_ServiceInstance.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\MSBTS_ServiceInstance.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\NTLogEvent.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\NTLogEvent.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\SSOConfigHelper.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\SSOConfigHelper.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\SSOConfigManager.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\SSOConfigManager.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\tempKey.snk" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Core\tempKey.snk">
+</Event><Event ErrorLevel="0" Project="BCC.Core" Source="BCC.Core\BCC.Core.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="BCC.Core" Source="BCC.Core\BCC.Core.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="ConsoleApplication" Source="ConsoleApplication\ConsoleApplication.csproj" Description="Project file successfully backed up as C:\BCC_Classic\BCC\Backup\ConsoleApplication\ConsoleApplication.csproj">
+</Event><Event ErrorLevel="0" Project="ConsoleApplication" Source="ConsoleApplication\Program.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\ConsoleApplication\Program.cs">
+</Event><Event ErrorLevel="0" Project="ConsoleApplication" Source="ConsoleApplication\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\ConsoleApplication\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ConsoleApplication" Source="ConsoleApplication\App.config" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\ConsoleApplication\App.config">
+</Event><Event ErrorLevel="0" Project="ConsoleApplication" Source="ConsoleApplication\ConsoleApplication.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ConsoleApplication" Source="ConsoleApplication\ConsoleApplication.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BCC.Controls" Source="BCC.Controls\BCC.Controls.csproj" Description="Project file successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Controls\BCC.Controls.csproj">
+</Event><Event ErrorLevel="0" Project="BCC.Controls" Source="BCC.Controls\BCC.Controls.csproj.user" Description="Project user file successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Controls\BCC.Controls.csproj.user">
+</Event><Event ErrorLevel="0" Project="BCC.Controls" Source="BCC.Controls\AlertIndicator.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Controls\AlertIndicator.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Controls" Source="BCC.Controls\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Controls\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Controls" Source="BCC.Controls\BCC.Controls.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="BCC.Controls" Source="BCC.Controls\BCC.Controls.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\BCC.Agent.csproj" Description="Project file successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Agent\BCC.Agent.csproj">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\BCC.Agent.csproj.user" Description="Project user file successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Agent\BCC.Agent.csproj.user">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\AgentService.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Agent\AgentService.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\AgentService.Designer.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Agent\AgentService.Designer.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\HtmlEmailHelper.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Agent\HtmlEmailHelper.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\Program.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Agent\Program.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\AgentInstaller.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Agent\AgentInstaller.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\AgentInstaller.Designer.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Agent\AgentInstaller.Designer.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Agent\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\App.config" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Agent\App.config">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\AgentInstaller.resx" Description="File successfully backed up as C:\BCC_Classic\BCC\Backup\BCC.Agent\AgentInstaller.resx">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\BCC.Agent.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="BCC.Agent" Source="BCC.Agent\BCC.Agent.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BCCAgentSetup.vdproj" Source="BCCAgentSetup\BCCAgentSetup.vdproj" Description="Project file successfully backed up as C:\BCC_Classic\BCC\Backup\BCCAgentSetup\BCCAgentSetup.vdproj">
+</Event><Event ErrorLevel="0" Project="" Source="bcc.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="bcc.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ConsoleApplication" Source="ConsoleApplication\ConsoleApplication.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="BCC.Controls" Source="BCC.Controls\BCC.Controls.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="BCC.Agent" Source="BCC.Agent\BCC.Agent.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

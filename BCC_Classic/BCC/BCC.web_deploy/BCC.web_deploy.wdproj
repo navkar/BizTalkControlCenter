@@ -1,0 +1,60 @@
+﻿<!-- 
+  Microsoft Visual Studio 2008 Web Deployment Project 
+  http://go.microsoft.com/fwlink/?LinkID=104956
+
+-->
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85EC3789-071C-49B7-9CF1-662B680CA40B}</ProjectGuid>
+    <SourceWebPhysicalPath>..\BCC.web</SourceWebPhysicalPath>
+    <SourceWebProject>{EF538932-892F-4748-ACE6-B9D767A20392}|C:\BCC\BCC.web</SourceWebProject>
+    <SourceWebVirtualPath>/BCC.web</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\Debug</OutputPath>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>BCC.web_deploy</SingleAssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\Release</OutputPath>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>BCC.web_deploy</SingleAssemblyName>
+    <UseWebConfigReplacement>false</UseWebConfigReplacement>
+    <VirtualDirectoryAlias>
+    </VirtualDirectoryAlias>
+    <ReplaceExistingVirtualDirectory>true</ReplaceExistingVirtualDirectory>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BCC.Controls\BCC.Controls.csproj">
+      <Project>{44253914-7EFD-464C-B8BF-3A356E836576}</Project>
+      <Name>BCC.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BCC.Core\BCC.Core.csproj">
+      <Project>{84543883-37D1-4137-9A5A-53F7A00780B1}</Project>
+      <Name>BCC.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WebDeployment\v9.0\Microsoft.WebDeployment.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.WebDeployment.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="BeforeMerge">
+  </Target>
+  <Target Name="AfterMerge">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

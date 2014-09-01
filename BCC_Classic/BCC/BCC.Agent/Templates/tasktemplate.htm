@@ -1,0 +1,25 @@
+﻿<div style="background-color:#FFFFCC;">
+  	<table cellspacing="0" cellpadding="4" rules="all" border="1" id="ctl00_leftContentPlaceHolder_taskView" style="background-color:#FFFFCC;color:#333333;width:100%;border-color:#525252;border-collapse:collapse;font-family:Verdana;font-size:10pt;font-weight:normal;">
+    <thead>
+        <tr style="color:Gold;background-color:#525252;font-size:10pt;font-weight:bold;">
+        <td colspan="6">BizTalk Control Center (BCC) - $HEADING</td>
+        </tr>
+    </thead>
+	<tbody>
+        <tr style="color:Gold;background-color:#525252;font-size:10pt;font-weight:bold;">
+            <th align="center" scope="col"><span style="color:Gold;">Priority</span></th>
+            <th align="center" scope="col"><span style="color:Gold;">Task</span></th>
+            <th align="center" scope="col"><span style="color:Gold;">Project</span></th>
+            <th align="center" scope="col"><span style="color:Gold;">Due On</span></th>
+            <th align="center" scope="col"><span style="color:Gold;">Status</span></th>
+            <th align="center" scope="col"><span style="color:Gold;">Hours</span></th>
+		</tr>
+        $$ROW_DATA
+        <tr>
+	        <td align="right" colspan="6">
+                    <span id="ctl00_leftContentPlaceHolder_taskView_ctl02_lblTaskHours" style="color:#525252;font-family:Verdana;font-size:10pt;font-weight:normal;">$TOTAL_HOURS hrs&nbsp;&nbsp;</span>
+            </td>
+        </tr>
+	</tbody>
+    </table>
+</div>

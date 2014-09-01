@@ -1,0 +1,7 @@
+C:\BCC\SampleEvents\obj\Release\ResolveAssemblyReference.cache
+C:\BCC\SampleEvents\bin\SampleEvents.dll
+C:\BCC\SampleEvents\bin\SampleEvents.pdb
+C:\BCC\SampleEvents\bin\BCC.Core.dll
+C:\BCC\SampleEvents\bin\BCC.Core.pdb
+C:\BCC\SampleEvents\obj\Release\SampleEvents.dll
+C:\BCC\SampleEvents\obj\Release\SampleEvents.pdb

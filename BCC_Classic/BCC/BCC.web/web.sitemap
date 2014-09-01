@@ -1,0 +1,51 @@
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<!-- Important note: description attribute is used by Speed Code, do not ever change it without proper design -->
+  <siteMapNode>
+    <siteMapNode url="" title="BizTalk Monitoring">
+      <siteMapNode url="~/BMHM.aspx" title="Health Matrix" description="101" />
+      <siteMapNode url="~/BMMS.aspx" title="Message Statistics" description="102" />
+      <siteMapNode url="~/BMUN.aspx" title="User Notifications" description="103" />
+      <siteMapNode url="~/BMMP.aspx" title="Monitor Performance" description="104" />
+    </siteMapNode>
+    <siteMapNode url="" title="BizTalk Artifacts">
+      <siteMapNode url="~/BAWS.aspx" title="Windows Services" description="201" />
+      <siteMapNode url="~/BAHI.aspx" title="Host Instances" description="202" />
+      <siteMapNode url="~/BAO.aspx" title="Orchestrations" description="203" />
+      <siteMapNode url="~/BAMV.aspx" title="Message View"  description="204"/>
+      <siteMapNode url="~/BASP.aspx" title="Send Ports" description="205" />
+      <siteMapNode url="~/BARL.aspx" title="Receive Locations" description="206" />
+      <siteMapNode url="~/BAP.aspx" title="Pipelines" description="207" />
+      <siteMapNode url="~/BAM.aspx" title="Maps" description="208" />
+      <siteMapNode url="~/BAS.aspx" title="Schemas" description="209" />
+      <siteMapNode url="~/BAC.aspx" title="Configuration" description="210" />
+      <siteMapNode url="~/BASSO.aspx" title="SSO Configuration" description="211" />
+    </siteMapNode>
+    <siteMapNode url="" title="Partner Validation">
+      <siteMapNode url="~/PVPS.aspx" title="Partner Services" description="301" />
+      <siteMapNode url="~/PVSJ.aspx" title="SQL Server Jobs" description="302" />
+      <siteMapNode url="~/PVPC.aspx" title="Performance Counters" description="303" />
+      <siteMapNode url="~/PVMA.aspx" title="Message Audit" description="304" />
+    </siteMapNode>
+    <siteMapNode url="" title="Search">
+      <siteMapNode url="~/SEL.aspx" title="Event Logs" description="401" />
+      <siteMapNode url="~/SBA.aspx" title="BizTalk Artifacts" description="402" />
+    </siteMapNode>
+    <siteMapNode url="" title="Deployment">
+      <siteMapNode url="~/DB.aspx" title="Bindings"  description="501" />
+      <siteMapNode url="~/DC.aspx" title="Configuration"  description="502" />
+      <siteMapNode url="~/DVC.aspx" title="Version Control" description="503"  />
+      <siteMapNode url="~/DV.aspx" title="Verification"  description="504"/>
+      <siteMapNode url="~/DSI.aspx" title="Scalability Index"  description="505"/>
+	</siteMapNode>
+    <siteMapNode url="" title="Administration">
+      <siteMapNode url="~/AMUR.aspx" title="Manage Users &amp; Roles" description="601" />
+      <siteMapNode url="~/AUA.aspx" title="User Activity" description="602"  />
+      <siteMapNode url="~/ASS.aspx" title="System Settings" description="603"  />
+      <siteMapNode url="~/AAS.aspx" title="Agent Settings" description="604"  />
+    </siteMapNode>
+    <siteMapNode url="" title="Developer Space">
+      <siteMapNode url="~/DSOV.aspx" title="Orchestration View" description="701"  />
+      <siteMapNode url="~/KCTL.aspx" title="Task Manager" description="702" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

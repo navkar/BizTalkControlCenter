@@ -1,0 +1,85 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+
+--%>
+
+<asp:GridView runat="server" CellPadding="4" ForeColor="#333333" GridLines="Both" Width="100%">
+    <FooterStyle cssclass="rowStyle" />
+    <EditRowStyle BackColor="#999999" />
+    <SelectedRowStyle BackColor="#7C1818" Font-Bold="True" ForeColor="#333333" />
+    <PagerStyle BackColor="#CCCCEE" ForeColor="White" HorizontalAlign="Center" />
+    <HeaderStyle BackColor="#7C1818" Font-Bold="True" ForeColor="White" />
+    <RowStyle cssclass="rowStyle" />                  
+    <AlternatingRowStyle cssclass="altRowStyle" /> 
+</asp:GridView>
+
+<asp:DataList skinID="sideList" runat="server" CellPadding="4" ForeColor="#333333" GridLines="Both" Width="100%">
+    <HeaderStyle BackColor="#e9e9e9" Font-Bold="true" ForeColor="#5D7B9D" />  
+    <FooterStyle BackColor="#e5eecc" Font-Bold="false" ForeColor="White" />
+</asp:DataList>
+
+<asp:GridView skinID="sideTable" runat="server" CellPadding="4" ForeColor="#333333" GridLines="Both" Width="100%">
+    <EditRowStyle BackColor="#999999" />
+    <PagerStyle BackColor="#E9E9E9" ForeColor="Teal" HorizontalAlign="Center" />
+    <HeaderStyle BackColor="#e9e9e9" Font-Bold="True" ForeColor="Black" />  
+    <FooterStyle BackColor="#e5eecc" Font-Bold="false" ForeColor="White" />
+    <RowStyle cssclass="rowStyle" />                  
+    <AlternatingRowStyle cssclass="altRowStyle" />
+    <SelectedRowStyle BackColor="#FFFFCC" Font-Bold="True" ForeColor="#333333" />
+</asp:GridView>
+
+<asp:GridView skinID="PagerView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="Both" Width="100%">
+    <EditRowStyle BackColor="#999999" />
+    <PagerStyle BackColor="#99CCCC" ForeColor="White" HorizontalAlign="Center" />
+    <HeaderStyle BackColor="#525252" Font-Bold="True" ForeColor="White" />  
+    <FooterStyle BackColor="#525252" Font-Bold="True" ForeColor="White" />
+    <RowStyle cssclass="rowStyle" />                  
+    <AlternatingRowStyle cssclass="altRowStyle" /> 
+    <SelectedRowStyle BackColor="#525252" Font-Bold="True" ForeColor="#333333" />
+    <PagerStyle BackColor="#CCCCEE" ForeColor="White" HorizontalAlign="Center" BorderColor="#FFC080"
+         BorderStyle="Dotted" Font-Names="Verdana" Font-Size="Smaller" />
+    <PagerSettings Position="TopAndBottom" />
+</asp:GridView>
+
+<asp:Login runat="server" Orientation="Horizontal"
+TextLayout="TextOnTop" BackColor="#F7F6F3" BorderColor="#7C1818"
+BorderPadding="4"
+BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#333333">
+<TitleTextStyle BackColor="#7C1818" Font-Bold="True" ForeColor="White" />
+<LoginButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
+<InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+</asp:Login>
+
+<asp:ChangePassword runat="server" ForeColor="#333333"
+BackColor="#F7F6F3" BorderColor="#E6E2D8" BorderStyle="Solid" 
+BorderWidth="1px" Font-Names="Verdana" BorderPadding="4" Width="100%"
+DisplayUserName="True">
+    <ChangePasswordButtonStyle BackColor="White" BorderColor="#C5BBAF" BorderStyle="Solid" 
+    Font-Size="0.8em" BorderWidth="1px" Font-Names="Verdana" ForeColor="#1C5E55" />
+    <ContinueButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" 
+    Font-Size="0.8em" ForeColor="#284775" />
+    <CancelButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" 
+    Font-Size="0.8em" ForeColor="#284775" />
+    <TitleTextStyle BackColor="#7C1818" Font-Bold="True" ForeColor="White" />
+    <PasswordHintStyle Font-Italic="True" ForeColor="#888888" />
+    <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+</asp:ChangePassword>
+  
+<asp:Label runat="server" ForeColor="#7C1818" Font-Names="Verdana" Font-Size="10pt" Font-Bold="True"/>
+<asp:Label skinID="PageHeader" runat="server" ForeColor="White" Font-Names="Verdana" Font-Size="10pt" Font-Bold="True" />
+<asp:Label skinID="PageCaption" runat="server" ForeColor="#7C1818" Font-Names="Verdana" Font-Size="12pt" Font-Bold="True" />
+
+<asp:LoginName runat="server" BackColor="#7C1818" ForeColor="White" />
+<asp:LoginStatus runat="server" style="text-decoration:none;" BackColor="#7C1818" BorderColor="#C5BBAF" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="white" />

@@ -1,0 +1,199 @@
+SET NOCOUNT ON
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+SET DEADLOCK_PRIORITY LOW
+
+SELECT  o.nvcName AS Orchestration, COUNT(*) as Count,
+	CASE i.nState
+		WHEN 1 THEN 'Ready To Run'
+		WHEN 2 THEN 'Active'
+		WHEN 4 THEN 'Suspended Resumable'
+		WHEN 8 THEN 'Dehydrated'
+		WHEN 16 THEN 'Completed With Discarded Messages'
+		WHEN 32 THEN 'Suspended Non-Resumable'
+	END as State
+FROM [BizTalkMsgboxDb]..[Instances] AS i WITH (NOLOCK) 
+JOIN [BizTalkMgmtDb]..[bts_Orchestration] AS o WITH (NOLOCK) ON i.uidServiceID = o.uidGUID
+--WHERE dtCreated > '2004-08-24 00:00:00' AND dtCreated < '2004-08-24 13:30:00'  
+GROUP BY o.nvcName, i.nState
+
+SET NOCOUNT ON
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+SET DEADLOCK_PRIORITY LOW
+
+CREATE TABLE #Temp (AppQueue nvarchar(256), QueueSize int)
+declare @nvcAppName sysname
+
+declare MyCursor CURSOR FAST_FORWARD FOR
+SELECT nvcApplicationName FROM [BizTalkMsgboxDb]..[Applications] WITH (NOLOCK)
+
+open MyCursor
+FETCH NEXT FROM MyCursor INTO @nvcAppName
+
+WHILE (@@FETCH_STATUS = 0)
+BEGIN
+    	INSERT INTO #Temp
+    	exec ('SELECT ''' + @nvcAppName + 'Q'', COUNT(*) FROM ' + @nvcAppName +'Q WITH (NOLOCK)')
+    
+	INSERT INTO #Temp
+	exec ('SELECT ''' + @nvcAppName + 'Q_Suspended'', COUNT(*) FROM ' + @nvcAppName +'Q_Suspended WITH (NOLOCK)')
+   	
+	INSERT INTO #Temp
+	exec ('SELECT ''InstanceStateMessageReferences_' + @nvcAppName + ''', COUNT(*) FROM InstanceStateMessageReferences_' + @nvcAppName + '  WITH (NOLOCK)')
+    
+	FETCH NEXT FROM MyCursor INTO @nvcAppName
+END  
+SELECT * FROM #Temp ORDER BY QueueSize DESC
+
+close MyCursor
+deallocate MyCursor
+DROP TABLE #Temp
+
+
+SET NOCOUNT ON
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+SET DEADLOCK_PRIORITY LOW
+
+CREATE TABLE #Temp (AppName nvarchar(256), StateMessages int, InstanceID uniqueidentifier, ServiceClassID uniqueidentifier, ServiceState nvarchar(256))
+declare @nvcAppName sysname
+
+declare MyCursor CURSOR FAST_FORWARD FOR
+SELECT nvcApplicationName FROM [BizTalkMsgboxDb]..[Applications] WITH (NOLOCK)
+
+open MyCursor
+FETCH NEXT FROM MyCursor INTO @nvcAppName
+
+WHILE (@@FETCH_STATUS = 0)
+BEGIN
+	INSERT INTO #Temp
+	exec ('SELECT ''' + @nvcAppName + ''', COUNT(*), i.uidInstanceID, i.uidClassID, i.nvcUserState FROM InstanceStateMessageReferences_' + @nvcAppName + ' AS s WITH (NOLOCK) JOIN Instances AS i WITH (NOLOCK) ON s.uidInstanceID = i.uidInstanceID GROUP BY i.uidInstanceID, i.uidClassID, i.nvcUserState')
+    
+	FETCH NEXT FROM MyCursor INTO @nvcAppName
+END  
+SELECT * FROM #Temp ORDER BY StateMessages DESC
+
+close MyCursor
+deallocate MyCursor
+DROP TABLE #Temp
+
+
+SET NOCOUNT ON
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+SET DEADLOCK_PRIORITY LOW
+
+CREATE TABLE #Temp (MaxRetries int, Active int, SendPort nvarchar(256), IsPrimaryTransport int)
+declare @nvcAppName sysname
+
+declare MyCursor CURSOR FAST_FORWARD FOR
+SELECT nvcApplicationName FROM [BizTalkMsgboxDb]..[Applications] WITH (NOLOCK)
+
+open MyCursor
+FETCH NEXT FROM MyCursor INTO @nvcAppName
+
+WHILE (@@FETCH_STATUS = 0)
+BEGIN
+	INSERT INTO #Temp
+	exec ('	SELECT	  MAX(q.nRetryCount) AS MaxRetries
+			  ,COUNT(*) AS Active
+			  ,sp.nvcName AS SendHandlersHostServiceName
+			  ,spt.bIsPrimary AS IsPrimaryTransport
+		FROM ' +  @nvcAppName + 'Q as q WITH (NOLOCK)
+			  INNER LOOP JOIN Subscription as s WITH (NOLOCK) ON q.uidServiceID = s.uidServiceID AND s.uidPortID = q.uidPortID
+			  INNER LOOP JOIN [BizTalkMgmtDb]..[bts_sendport] as sp WITH (NOLOCK) ON q.uidServiceID = sp.uidGUID
+			  INNER LOOP JOIN [BizTalkMgmtDb]..[bts_sendport_transport] as spt WITH (NOLOCK) ON sp.nID = spt.nSendPortID AND spt.uidGUID = q.uidPortID
+		GROUP BY  sp.nvcName, s.uidPortID, spt.bIsPrimary
+		ORDER BY  SendHandlersHostServiceName ASC')
+
+	FETCH NEXT FROM MyCursor INTO @nvcAppName
+END  
+SELECT * FROM #Temp ORDER BY Active DESC
+
+close MyCursor
+deallocate MyCursor
+DROP TABLE #Temp
+
+
+SET NOCOUNT ON
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+SET DEADLOCK_PRIORITY LOW
+
+CREATE TABLE #Temp (JobID uniqueidentifier,
+                    JobName sysname,
+                    Status int,
+                    DateStarted int,
+                    TimeStarted int,
+                    Duration int,
+                    OpEmailed nvarchar(20),
+                    OpNetSent nvarchar(20),
+                    OpPaged nvarchar(20),
+                    Retries int,
+                    Server nvarchar(30)
+                    )
+
+CREATE TABLE #Final (MessageBox sysname,
+		    JobName sysname,
+		    DateStarted int,
+                   	    TimeStarted int,
+		    Duration int,
+                    Status int
+                    )
+
+declare @dbName sysname
+
+declare MyCursor cursor FAST_FORWARD FOR
+select DBName FROM [BizTalkMgmtDb]..[adm_MessageBox] WITH (NOLOCK)
+
+open MyCursor
+
+FETCH NEXT FROM MyCursor INTO @dbName
+WHILE (@@FETCH_STATUS = 0)
+BEGIN
+
+    INSERT INTO #Temp
+    exec ('[msdb]..[sp_help_jobhistory] @job_name = ''MessageBox_DeadProcesses_Cleanup_' + @dbName + '''')
+    INSERT INTO #Final
+    SELECT TOP 1 @dbName, JobName, DateStarted, TimeStarted, Duration, Status FROM #Temp
+    TRUNCATE TABLE #Temp    
+
+    INSERT INTO #Temp
+    exec ('[msdb]..[sp_help_jobhistory] @job_name = ''MessageBox_Message_Cleanup_' + @dbName + '''')
+    INSERT INTO #Final
+    SELECT TOP 1 @dbName, JobName, DateStarted, TimeStarted, Duration, Status FROM #Temp
+    TRUNCATE TABLE #Temp    
+
+    INSERT INTO #Temp
+    exec ('[msdb]..[sp_help_jobhistory] @job_name = ''MessageBox_Parts_Cleanup_' + @dbName + '''')
+    INSERT INTO #Final
+    SELECT TOP 1 @dbName, JobName, DateStarted, TimeStarted, Duration, Status FROM #Temp
+    TRUNCATE TABLE #Temp    
+
+    INSERT INTO #Temp
+    exec ('[msdb]..[sp_help_jobhistory] @job_name = ''PurgeSubscriptionsJob_' + @dbName + '''')
+    INSERT INTO #Final
+    SELECT TOP 1 @dbName, JobName, DateStarted, TimeStarted, Duration, Status FROM #Temp
+    TRUNCATE TABLE #Temp    
+
+    INSERT INTO #Temp
+    exec ('[msdb]..[sp_help_jobhistory] @job_name = ''TrackedMessages_Copy_' + @dbName + '''')
+    INSERT INTO #Final
+    SELECT TOP 1 @dbName, JobName, DateStarted, TimeStarted, Duration, Status FROM #Temp
+    TRUNCATE TABLE #Temp    
+
+    FETCH NEXT FROM MyCursor INTO @dbName
+END
+
+SELECT * FROM #Final ORDER BY MessageBox
+
+close MyCursor
+deallocate MyCursor
+
+drop table #Temp
+drop table #Final
+
+
+
+
+
+
+
+
+

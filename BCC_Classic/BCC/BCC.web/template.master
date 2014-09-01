@@ -1,0 +1,237 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="template.master.cs" Inherits="template" %>
+
+<%@ Register TagPrefix="bcc" TagName="AgentIndicator" Src="~/Controls/AgentIndicator.ascx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+    <link rel="stylesheet" type="text/css" href="./css/template.css" />
+    <link rel="stylesheet" type="text/css" href="./css/help.css" />
+    <link rel="stylesheet" type="text/css" href="./css/tag.css" />
+
+<!-- BCC menu system start -->
+<link rel="stylesheet" type="text/css" href="./bccMenu/jqueryslidemenu.css" />
+<link rel="stylesheet" type="text/css" href="./bccMenu/stickytooltip.css" />
+<!--[if lte IE 7]>
+    <style type="text/css">
+    html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+    </style>
+    <![endif]-->
+<script type="text/javascript" src="./bccMenu/jquery.min.js"></script>
+<script type="text/javascript" src="./bccMenu/jqueryslidemenu.js"></script>
+<script type="text/javascript" src="./bccMenu/stickytooltip.js"></script>
+
+<!-- BCC menu system end -->    
+
+<script type="text/javascript">
+
+    function HighlightON(obj) {
+        if (obj != null) {
+            obj.originalClassName = obj.className;
+            obj.className = obj.className + 'HL';
+        }
+    }
+
+    function HighlightOFF(obj) {
+        if (obj != null) {
+            obj.className = obj.originalClassName;
+        }
+    }
+
+</script>
+
+</head>
+<body bgcolor="#E9E9E9">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="mgr" runat="server" />
+<!-- Define Tooltips -->
+
+        <div id="speedcodeTooltip" class="stickytooltip">
+        <div style="padding:5px">
+          <div id="sticky1" style="width:200px">
+            A Speedcode is a three digit number (for e.g. 201) used to access a page quickly. <br /><br />
+            The speedcode of this page is <asp:Label ID="lblSpeedCodeTooltip" runat="server" />, try to remember it.
+          </div>
+        </div>
+        <div class="stickystatus"></div>
+        </div>
+
+<!-- Define Tooltips -->
+       
+    <asp:SiteMapDataSource id="MenuSource" runat="server" StartFromCurrentNode="false" ShowStartingNode="true" />
+        <div>
+            <table border="0" align="center" cellspacing="0" cellpadding="0" width="100%" >
+                <tr>
+                    <td colspan="2">
+                        <table class="pageHeader" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tr>
+                                <td align="left">
+                                    <asp:Image ID="imgLogo" runat="server" ImageUrl="~/Images/logo.gif" />
+                                </td>
+				                <td align="center">
+				                <h3>
+						                <asp:Label skinID="PageHeader" ID="lblInfo" runat="server"/>
+				                </h3>
+				                </td>
+				                <td align="right">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td>
+                                                    <bcc:AgentIndicator ID="bccAgent" runat="server" />
+                                                </td>
+                                            </tr>
+                                        </table>
+				                </td>
+				                <td  valign="middle" align="right">
+				                  <!-- I want it on top of each other -->
+				                  <table border="0" cellspacing="0" cellpadding="2" width="40%">
+				                  <tr>
+				                      <td align="center"> 
+				                        <asp:LoginName ID="loginName" runat="server" FormatString="{0}" />
+				                      </td>
+				                  </tr>
+				                  <tr>
+				                      <td align="center"> 
+        			  	                <asp:LoginStatus ID="loginStatus" runat="server" LogoutPageUrl="default.aspx" LogoutText="logout" />
+		        	  	              </td>
+  		  	                      </tr>
+  		  	                      </table>
+  		  	                      <!-- I want it on top of each other -->
+				                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                     <td width="100%" valign="top" colspan="2">
+
+                        <div id="myslidemenu" class="jqueryslidemenu">
+                        <ul>
+                            <li><a href="BMHM.aspx">BizTalk Monitoring</a>
+                            <ul>
+                                <li><a href="BMHM.aspx">Health Matrix</a></li>
+                                <li><a href="BMMS.aspx">Message Statistics</a></li>
+                                <li><a href="BMUN.aspx">User Notifications</a></li>
+                                <li><a href="BMMP.aspx">Monitor Performance</a></li>
+                            </ul>
+                            </li>
+                            <li><a href="BAHI.aspx">BizTalk Artifacts</a>
+                            <ul>
+                              <li><a href="BAWS.aspx">Windows Services</a></li>
+                              <li><a href="BAHI.aspx">Host Instances</a></li>
+                              <li><a href="BAO.aspx">Orchestrations</a></li>
+                              <li><a href="BAMV.aspx">Message View</a></li>
+                              <li><a href="BASP.aspx">Send Ports</a></li>
+                              <li><a href="BARL.aspx">Receive Locations</a></li>
+                              <li><a href="BAP.aspx">Pipelines</a></li>
+                              <li><a href="BAM.aspx">Maps</a></li>
+                              <li><a href="BAS.aspx">Schemas</a></li>
+                              <li><a href="BAC.aspx">Configuration</a></li>
+                              <li><a href="BASSO.aspx">SSO Configuration</a></li>
+                            </ul>
+                            </li>
+                            <li><a href="PVPS.aspx">Partner Validation</a>
+                              <ul>
+                              <li><a href="PVPS.aspx">Partner Services</a></li>
+                              <li><a href="PVSJ.aspx">SQL Server Jobs</a></li>
+                              <li><a href="PVPC.aspx">Performance Counters</a></li>
+                              <li><a href="PVMA.aspx">Message Audit</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="SBA.aspx">Search</a>
+                              <ul>
+                              <li><a href="SEL.aspx">Event Logs</a></li>
+                              <li><a href="SBA.aspx">BizTalk Artifacts</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="DB.aspx">Deployment</a>
+                              <ul>
+                              <li><a href="DB.aspx">Bindings</a></li>
+                              <li><a href="DC.aspx">Configuration</a></li>
+                              <li><a href="DV.aspx">Verification</a></li>
+                              <li><a href="DSI.aspx">Scalability Index</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="AMUR.aspx">Administration</a>
+                              <ul>
+                              <li><a href="AMUR.aspx">Manage Users & Roles</a></li>
+                              <li><a href="AUA.aspx">User Activity</a></li>
+                              <li><a href="ASS.aspx">System Settings</a></li>
+                              <li><a href="AAS.aspx">Agent Settings</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="DSOV.aspx">Developer Space</a>
+                              <ul>
+                              <li><a href="DSOV.aspx">Orchestration View</a></li>
+                              <li><a href="KCTL.aspx">Task Manager</a></li>
+                              </ul>
+                            </li> 
+                        </ul>
+                        <br style="clear: left" />
+                        </div>
+                        <div>
+                                <table border="0" cellspacing="0" cellpadding="0" width="100%">
+				                  <tr>
+				                      <td align="left" width="20%">
+                                            <asp:SiteMapPath ID="SiteMapPath" runat="server" ShowToolTips="true" SkipLinkText="bb"
+                                                    RenderCurrentNodeAsLink="true" PathSeparator=" > ">
+                                                    <PathSeparatorStyle ForeColor="#5D7B9D" />
+                                                    <CurrentNodeStyle ForeColor="#333333" />
+                                                    <NodeStyle ForeColor="#7C6F57"   />
+                                                    <RootNodeStyle  ForeColor="#5D7B9D"  />
+                                            </asp:SiteMapPath> 
+                                      </td>
+                                      <td align="left" width="50%">
+                                      </td>
+                                      <td align="right" width="10%">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="lblSpeedCode" data-tooltip="sticky1" runat="server" Text="Speedcode"></asp:Label>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox ID="speedCode" Columns="3" Width="25px" Wrap="false" ToolTip="Specify a speedcode for quick access" MaxLength="4" BorderStyle="Groove" AutoPostBack="true" Runat="server" />   
+                                            </td>
+                                        </tr>
+                                        </table>
+                                      </td>
+                                   </tr>
+                                   </table>
+                        </div>
+                     </td>
+                </tr>
+                <tr>
+                <td colspan="2">
+                    <asp:Panel ID="announcePanel" runat="server" Visible="false" >
+                    <table border="0" cellspacing="0" bgcolor="#CECECE" cellpadding="0" width="100%">
+                    <tr>
+                        <td width="2%" valign="top">
+                            <asp:Image ID="announceImg" ToolTip="Announcement" runat="server" ImageUrl="~/Images/announce.gif" Visible="true" />
+		                </td>
+		                <td width="95%">
+		                    <asp:Label ID="lblAnnouncement" Width="100%" runat="server" visible="true" ></asp:Label>
+		                </td>
+		            </tr>
+                    </table>
+                    </asp:Panel>
+                </td>
+                </tr>
+                <tr>
+                   <td width="80%" valign="top">
+                     <asp:ContentPlaceHolder ID="leftContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                   </td>
+                   <td width="20%" valign="top">
+                     <asp:ContentPlaceHolder ID="rightContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                   </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <p><small><asp:Label ID="footerLabel" runat="server"/></small></p>
+                    </td> 
+                </tr>
+            </table>
+        </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<BizTalkHostConfig Version="1.0" defaultHost="BizTalkServerApplication" defaultIsoHost="BizTalkServerIsolatedHost">
+	<MakeHosts>
+		<Host>
+			<HostName>BizTalkProcessingHost</HostName>
+			<Type>InProcess</Type>
+			<NTGroup>BizTalk Application Users</NTGroup>
+			<AuthTrusted>false</AuthTrusted>
+			<InstallServers Action="true">
+				<Server>
+					  <ServerName Start="true">.</ServerName>
+					  <UserName>Administrator</UserName>
+					  <Password Prompt="false">p@ssword1</Password>
+				</Server>
+			</InstallServers>
+			<SetAdapters Action="true">
+			<Adapter>
+				  <AdapterName Type="Receive">FILE</AdapterName>
+			</Adapter>
+			<Adapter>
+				  <AdapterName Type="Send">FILE</AdapterName>
+			</Adapter>
+			</SetAdapters>
+		</Host>
+	</MakeHosts>
+</BizTalkHostConfig>

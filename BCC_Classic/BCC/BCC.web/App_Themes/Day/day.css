@@ -1,0 +1,109 @@
+.pageHeader
+{
+  background-color: #525252;
+}
+
+.spantag
+{
+  color:#525252;
+  font-size:8pt;
+}
+
+.span_regular
+{
+  color:#525252;
+  font-size:8pt;
+}
+
+.tableborder
+{
+  background-color: #525252;
+}
+
+.rowStyle 
+{   
+    color: #333333; 
+    background-color: #FFFFCC;
+}
+
+.altRowStyle 
+{
+    color: #333333; 
+    background-color: #FFFFFF;
+}
+
+.rowStyleHL 
+{
+    color: #333333; 
+    background-color: #CCCCEE;
+}
+
+.altRowStyleHL 
+{
+    color: #333333; 
+    background-color: #CCCCEE;
+}
+
+/*
+This is for sortSkin - this has to be eventually merged.
+*/
+
+.table-style{
+	font-family:arial;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	border-color: #CDCDCD;
+	width:850px;
+	color: #3D3D3D;
+}
+.table-style td, .table-style th
+{
+	border-color: #CDCDCD;
+}
+
+.alternating-row-style
+{
+    background-color:#F0F0F6;
+    font-size: 8pt;
+}
+.header-style 
+{
+    background-color:#F0F0F6;
+    background-image: url(Images/sortskin/sort_none.gif);
+    background-repeat: no-repeat;
+    background-position: center left;     
+    padding-left: 20px;
+}  
+
+.header-style a
+{
+	text-decoration:none;
+	color:black;
+	display:block;
+}    
+
+.row-style
+{
+	background-color: #FFF;
+	font-size: 8pt;
+}
+
+.row-style td, .alternating-row-style td 
+{
+	padding: 4px;
+}
+
+.sort-asc-header-style
+{
+    background-image: url(Images/sortskin/sort_asc.gif);     
+    background-color: #8dbdd8; 	
+    background-repeat: no-repeat;
+    background-position: center left;       
+}
+
+.sort-desc-header-style{
+    background-image: url(Images/sortskin/sort_desc.gif);     
+    background-color: #8dbdd8; 	
+    background-repeat: no-repeat;
+    background-position: center left;       
+}   

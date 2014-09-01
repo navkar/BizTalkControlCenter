@@ -1,0 +1,35 @@
+.shiftcontainer{
+position: relative;
+left: 5px; /*Number should match -left shadow depth below*/
+top: 5px; /*Number should match -top shadow depth below*/
+}
+
+.shadowcontainer{
+width: 400px; /* container width*/
+background-color: #d1cfd0;
+}
+
+.shadowcontainer .innerdiv{
+/* Add container height here if desired */
+background-color: #FFFFFF;
+border: 1px solid gray;
+padding: 6px;
+position: relative;
+left: -5px; /*shadow depth*/
+top: -5px; /*shadow depth*/
+}
+
+.shadowcontainer300{
+width: 300px; /* container width*/
+background-color: #d1cfd0;
+}
+
+.shadowcontainer300 .innerdiv{
+/* Add container height here if desired */
+background-color: #FFFFFF;
+border: 1px solid gray;
+padding: 6px;
+position: relative;
+left: -5px; /*shadow depth*/
+top: -5px; /*shadow depth*/
+}

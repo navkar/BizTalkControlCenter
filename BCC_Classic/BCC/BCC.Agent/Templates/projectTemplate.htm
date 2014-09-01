@@ -1,0 +1,27 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<body bgcolor="#E9E9E9">
+<table cellspacing="0" cellpadding="4" rules="all" border="1" id="Table1" style="background-color:#FFFFCC;color:#333333;width:100%;border-color:#525252;border-collapse:collapse;font-family:Verdana;font-size:10pt;font-weight:normal;">
+<thead>
+    <tr style="color:Gold;background-color:#525252;font-size:10pt;font-weight:bold;">
+    <td colspan="6">#PROJECT_NAME Project Status Report ($PROJECT_FROM_DATE to $PROJECT_TO_DATE)</td>
+    </tr>
+</thead>
+<tbody>
+    <tr style="color:Gold;background-color:#525252;font-size:10pt;font-weight:bold;">
+        <th align="center" scope="col"><span style="color:Gold;">Priority</span></th>
+        <th align="center" scope="col"><span style="color:Gold;">Task</span></th>
+        <th align="center" scope="col"><span style="color:Gold;">Status</span></th>
+        <th align="center" scope="col"><span style="color:Gold;">Assigned To</span></th>
+        <th align="center" scope="col"><span style="color:Gold;">Hours</span></th>
+	</tr>
+    $$PROJECT_DATA
+    <tr>
+	    <td align="right" colspan="6">
+                <span id="Span1" style="color:#525252;font-family:Verdana;font-size:10pt;font-weight:normal;">$TOTAL_PROJECT_HOURS hrs</span>
+        </td>
+    </tr>
+</tbody>
+</table>
+</body>
+</html>
